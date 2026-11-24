@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMart — Groceries made fresh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-strip">🌿 Fresh picks, fair prices — delivered to your doorstep</div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">✳</span> fresh<span>mart</span></a>
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search for fruits, vegetables, snacks..."></div>
+    <button class="cart-button" id="cartToggle">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+        <h1>Freshness you<br><em>can taste.</em></h1>
+        <p>Everyday essentials and farm-fresh favourites, picked with care and brought right to you.</p>
+        <a class="primary-btn" href="#shop">Shop groceries <span>→</span></a>
+        <div class="hero-notes"><span>✓ Fresh quality</span><span>✓ Great value</span><span>✓ Easy shopping</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div>
+        <div class="hero-circle"><span>🥑</span><span>🍊</span><span>🥬</span><span>🍓</span><span>🥕</span></div>
+        <div class="fresh-stamp">FRESH<br>EVERY DAY</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>🚚</span><p><b>Quick delivery</b><small>Groceries at your door</small></p></div>
+      <div><span>🌱</span><p><b>Freshly selected</b><small>Quality you can trust</small></p></div>
+      <div><span>💚</span><p><b>Everyday value</b><small>Prices that feel good</small></p></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE GOOD STUFF</span><h2>Shop our groceries</h2></div>
+        <span class="item-total" id="itemTotal">8 products</span>
+      </div>
+      <nav class="categories" id="categories">
+        <button class="category active" data-category="All">✨ All items</button>
+        <button class="category" data-category="Fruits">🍎 Fruits</button>
+        <button class="category" data-category="Vegetables">🥦 Vegetables</button>
+        <button class="category" data-category="Dairy">🥛 Dairy</button>
+        <button class="category" data-category="Bakery">🍞 Bakery</button>
+        <button class="category" data-category="Snacks">🍪 Snacks</button>
+      </nav>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="bottom-banner"><div><span class="eyebrow">A LITTLE MORE FRESH</span><h2>Make room for<br>the good stuff.</h2><p>Fill your basket with everyday favourites.</p></div><div class="banner-emoji">🥑 🍋 🥕</div></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">✳</span> fresh<span>mart</span></a><p>Fresh choices for happy homes.</p><small>© 2026 FreshMart. Demo storefront for learning purposes.</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR BASKET</span><h2>Shopping cart</h2></div><button id="closeCart" class="close-btn" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"><div class="empty-cart">Your basket is waiting for something fresh. 🥬</div></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><b id="subtotal">₹0</b></div><p>Delivery and taxes are calculated at checkout.</p><button class="checkout-btn" id="checkoutBtn">Continue to checkout →</button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
